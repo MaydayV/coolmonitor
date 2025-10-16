@@ -6,12 +6,21 @@
 👉 **[点击注册 Railway](https://railway.com?referralCode=vip)**
 
 ### 2. 一键部署
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template?referralCode=vip)
 
-或手动部署：
+**方式 A：从 GitHub 直接部署（推荐）**
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/github.com/maydayv/coolmonitor?referralCode=vip)
+
+点击按钮后：
+- 选择从 GitHub 部署
+- 授权 Railway 访问仓库
+- 自动开始构建
+
+**方式 B：手动部署**
 1. 访问 [Railway Dashboard](https://railway.app/dashboard?referralCode=vip)
 2. New Project → Deploy from GitHub repo
-3. 选择 `coolmonitor` 仓库
+3. 搜索并选择 `coolmonitor` 仓库
+4. 点击 Deploy
 
 ### 3. 配置 Volume（必须！）
 **这是最关键的一步，否则数据会丢失！**
