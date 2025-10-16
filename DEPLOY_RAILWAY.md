@@ -1,28 +1,31 @@
 # Railway 部署指南
 
-## 🚀 快速部署（3 步完成）
+## 🚀 快速部署（4 步完成）
 
-### 1. 注册 Railway 账号
+### 步骤 0：Fork 仓库（必须！）
+⚠️ **Railway 只能部署你自己账号下的仓库**
+
+1. 访问原仓库：https://github.com/star7th/coolmonitor
+2. 点击右上角 **Fork** 按钮
+3. Fork 到你的 GitHub 账号
+
+### 步骤 1：注册 Railway
 👉 **[点击注册 Railway](https://railway.com?referralCode=vip)**
 
-### 2. 一键部署
+### 步骤 2：开始部署
+👉 **[点击这里开始部署](https://railway.app/new?referralCode=vip)**
 
-**方式 A：从 GitHub 直接部署（推荐）**
+然后：
+1. 选择 **"Deploy from GitHub repo"**
+2. **首次使用需要授权**：点击 "Configure GitHub App"
+3. 在弹出窗口选择：
+   - **All repositories**（推荐）
+   - 或只选择 `coolmonitor` 仓库
+4. 回到 Railway，搜索 `coolmonitor`
+5. 选择 **你自己账号下的** `coolmonitor` 仓库
+6. 点击 **Deploy**
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/github.com/maydayv/coolmonitor?referralCode=vip)
-
-点击按钮后：
-- 选择从 GitHub 部署
-- 授权 Railway 访问仓库
-- 自动开始构建
-
-**方式 B：手动部署**
-1. 访问 [Railway Dashboard](https://railway.app/dashboard?referralCode=vip)
-2. New Project → Deploy from GitHub repo
-3. 搜索并选择 `coolmonitor` 仓库
-4. 点击 Deploy
-
-### 3. 配置 Volume（必须！）
+### 步骤 3：配置 Volume（必须！）
 **这是最关键的一步，否则数据会丢失！**
 
 ```
@@ -44,8 +47,22 @@
 
 ## 🔧 常见问题
 
+**Q: 搜索不到仓库？（最常见问题）**  
+A: 有两个原因：
+1. **没有 Fork 仓库** - Railway 只能看到你账号下的仓库
+2. **没有授权 GitHub** - 需要在 Railway 中配置 GitHub App 权限
+
+解决方法：
+```
+1. 确保已经 Fork 了原仓库到你的账号
+2. Railway Dashboard → 右上角头像 → Account Settings
+3. Integrations → GitHub → Configure
+4. 选择 "All repositories" 或添加 coolmonitor 仓库
+5. 保存后重新部署
+```
+
 **Q: 数据丢失？**  
-A: 必须配置 Volume（/app/data）
+A: 必须配置 Volume（/app/data, 1GB）
 
 **Q: 服务停止？**  
 A: 免费 500h 用完，升级到 $5/月
@@ -54,5 +71,5 @@ A: 免费 500h 用完，升级到 $5/月
 A: Deployments → View Logs
 
 **Q: 更新代码？**  
-A: `git push` 自动重新部署
+A: 在你 Fork 的仓库 `git push`，Railway 自动重新部署
 
