@@ -48,17 +48,16 @@
 
 ## 📦 安装与部署
 
-### Railway 快速部署（推荐）
+### Railway 一键部署（最简单）
 
-**[👉 点击这里开始部署](https://railway.app/new?referralCode=vip)**
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/deploy/GAsUJY?referralCode=vip)
 
-**4 步完成：**
-1. [注册 Railway 账号](https://railway.com?referralCode=vip)（如未注册）
-2. 点击上面链接 → **Deploy from GitHub repo**
-3. 选择你 Fork 的 `coolmonitor` 仓库（首次需授权 GitHub）
-4. 部署后添加 Volume：**Settings → Volumes → Mount Path: `/app/data`**
+**3 步完成：**
+1. 点击上方按钮（如未注册会自动引导注册）
+2. 点击 **Deploy Now** 开始部署
+3. 部署完成后添加 Volume：**Settings → Volumes → Mount Path: `/app/data`, Size: 1GB**
 
-> ⚠️ **重要**：必须先 **Fork 这个仓库到你的 GitHub 账号**，Railway 才能找到并部署它！
+> ✅ 无需 Fork 仓库，无需配置，真正的一键部署！
 
 详细说明：[Railway 部署文档](./DEPLOY_RAILWAY.md)
 
