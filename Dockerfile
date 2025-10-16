@@ -118,8 +118,8 @@ ENV PORT=3333
 ENV HOSTNAME="0.0.0.0"
 ENV NODE_ENV=production
 
-# 数据卷 - 用于SQLite数据库文件
-VOLUME ["/app/data"]
+# Railway 使用自己的 Volume 系统，不需要在 Dockerfile 中声明 VOLUME
+# 在 Railway UI 中配置：Settings → Volumes → Mount Path: /app/data
 
 # 启动应用
 CMD ["./startup.sh"] 
