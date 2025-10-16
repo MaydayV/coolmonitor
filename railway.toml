@@ -1,0 +1,15 @@
+# Railway 配置文件
+# 注意：Volume 需要在 Railway UI 中手动创建
+# 设置：Mount Path = /app/data, Size = 1GB
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "./startup.sh"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+healthcheckPath = "/"
+healthcheckTimeout = 300
+

@@ -48,6 +48,19 @@
 
 ## 📦 安装与部署
 
+### Railway 一键部署（最简单）
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template?referralCode=vip)
+
+**3步完成：**
+1. [注册 Railway 账号](https://railway.com?referralCode=vip)
+2. 点击上方按钮一键部署
+3. 添加 Volume（/app/data, 1GB）
+
+详细说明：[Railway 部署文档](./DEPLOY_RAILWAY.md)
+
+---
+
 ### 使用Docker部署（推荐）
 
 使用Docker是运行酷监控最简单的方式：
